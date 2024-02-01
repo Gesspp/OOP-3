@@ -175,17 +175,6 @@ public class tdArray
         }
     }
 
-    public int CalculateDeterminant()
-    {
-        if (array.GetLength(0) != array.GetLength(1))
-        {
-            throw new Exception("Матрица должна быть квадратной");
-        }
-
-        // Расчет определителя матрицы
-        // Ваш код для расчета определителя
-        return 0;
-    }
 }
 
 public class JaggedArray
