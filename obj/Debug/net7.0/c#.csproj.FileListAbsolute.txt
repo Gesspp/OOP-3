@@ -1,0 +1,15 @@
+E:\важное\всё\программирование\c#\obj\Debug\net7.0\c#.csproj.AssemblyReference.cache
+E:\важное\всё\программирование\c#\obj\Debug\net7.0\c#.GeneratedMSBuildEditorConfig.editorconfig
+E:\важное\всё\программирование\c#\obj\Debug\net7.0\c#.AssemblyInfoInputs.cache
+E:\важное\всё\программирование\c#\obj\Debug\net7.0\c#.AssemblyInfo.cs
+E:\важное\всё\программирование\c#\obj\Debug\net7.0\c#.csproj.CoreCompileInputs.cache
+E:\важное\всё\программирование\c#\bin\Debug\net7.0\c#.exe
+E:\важное\всё\программирование\c#\bin\Debug\net7.0\c#.deps.json
+E:\важное\всё\программирование\c#\bin\Debug\net7.0\c#.runtimeconfig.json
+E:\важное\всё\программирование\c#\bin\Debug\net7.0\c#.dll
+E:\важное\всё\программирование\c#\bin\Debug\net7.0\c#.pdb
+E:\важное\всё\программирование\c#\obj\Debug\net7.0\c#.dll
+E:\важное\всё\программирование\c#\obj\Debug\net7.0\refint\c#.dll
+E:\важное\всё\программирование\c#\obj\Debug\net7.0\c#.pdb
+E:\важное\всё\программирование\c#\obj\Debug\net7.0\c#.genruntimeconfig.cache
+E:\важное\всё\программирование\c#\obj\Debug\net7.0\ref\c#.dll
