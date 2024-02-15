@@ -1,17 +1,14 @@
-﻿using System;
+﻿namespace Arrays;
 
-namespace Arrays
+internal abstract class bArray
 {
-    internal abstract class bArray
+    protected bArray() { }
+    protected void PrintArray() { }
+    protected void userArray () { }
+    protected void randomArray() { }
+    protected float middle()
     {
-        protected bArray() { }
-        protected void PrintArray() { }
-        protected void userArray () { }
-        protected void randomArray() { }
-        protected float middle()
-        {
-            return 0;
-        }
-
+        return 0;
     }
+
 }
