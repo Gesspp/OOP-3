@@ -1,7 +1,9 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-public class odArray
+namespace Arrays;
+
+internal class odArray : bArray
 {
     private int[] array;
 
@@ -16,6 +18,11 @@ public class odArray
         {
             randomArray();
         }
+    }
+
+    public void ReCreate(int length) {
+        array = new int[length];
+        userArray();
     }
 
     private void userArray()

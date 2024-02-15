@@ -1,6 +1,9 @@
-public class tdArray
+using System;
+namespace Arrays;
+
+internal class tdArray : bArray
 {
-    private int[,] array;
+    public int[,] array;
 
     public tdArray(int rows, int columns, bool fillByUser = false)
     {
@@ -15,7 +18,7 @@ public class tdArray
         }
     }
 
-    private void userArray()
+    public void userArray()
     {
         Console.WriteLine("Введите значения матрицы:");
         for (int i = 0; i < array.GetLength(0); i++)
@@ -28,7 +31,7 @@ public class tdArray
         }
     }
 
-    private void randomArray()
+    public void randomArray()
     {
         Random random = new Random();
         for (int i = 0; i < array.GetLength(0); i++)

@@ -1,6 +1,8 @@
-public class JaggedArray
+namespace Arrays;
+
+internal class JaggedArray : bArray
 {
-    private int[][] array;
+    public int[][] array;
 
     public JaggedArray(int[] lengths, bool fillByUser = false)
     {
@@ -20,7 +22,7 @@ public class JaggedArray
         }
     }
 
-    private void userArray()
+    public void userArray()
     {
         Console.WriteLine("Введите значения ступенчатого массива:");
         for (int i = 0; i < array.Length; i++)
@@ -33,7 +35,7 @@ public class JaggedArray
         }
     }
 
-    private void randomArray()
+    public void randomArray()
     {
         Random random = new Random();
         for (int i = 0; i < array.Length; i++)
