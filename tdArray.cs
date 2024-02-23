@@ -1,7 +1,7 @@
 using System;
 namespace Arrays;
 
-internal class tdArray : bArray
+sealed internal class tdArray : bArray, ITDArray
 {
     public int[,] array;
 
@@ -18,7 +18,7 @@ internal class tdArray : bArray
         }
     }
 
-    public void userArray()
+    public override void userArray()
     {
         Console.WriteLine("Введите значения матрицы:");
         for (int i = 0; i < array.GetLength(0); i++)
@@ -31,7 +31,7 @@ internal class tdArray : bArray
         }
     }
 
-    public void randomArray()
+    public override void randomArray()
     {
         Random random = new Random();
         for (int i = 0; i < array.GetLength(0); i++)
@@ -43,7 +43,7 @@ internal class tdArray : bArray
         }
     }
 
-    public void PrintArray()
+    public override void Print()
     {
         Console.WriteLine("Элементы матрицы:");
         for (int i = 0; i < array.GetLength(0); i++)
@@ -56,7 +56,7 @@ internal class tdArray : bArray
         }
     }
 
-    public double middle()
+    public override double middle()
     {
         int sum = 0;
         int count = 0;

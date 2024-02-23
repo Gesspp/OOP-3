@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Arrays;
 
-internal class odArray : bArray
+sealed internal class odArray : bArray, ILineArray
 {
     private int[] array;
 
@@ -25,7 +25,7 @@ internal class odArray : bArray
         userArray();
     }
 
-    private void userArray()
+    public override void userArray()
     {
         Console.WriteLine("Введите значения массива:");
         for (int i = 0; i < array.Length; i++)
@@ -34,7 +34,7 @@ internal class odArray : bArray
         }
     }
 
-    private void randomArray()
+    public override void randomArray()
     {
         Random random = new Random();
         for (int i = 0; i < array.Length; i++)
@@ -43,7 +43,7 @@ internal class odArray : bArray
         }
     }
 
-    public void PrintArray()
+    public override void Print()
     {
         Console.WriteLine("Элементы массива:");
         foreach (int element in array)
@@ -53,7 +53,7 @@ internal class odArray : bArray
         Console.WriteLine();
     }
 
-    public double middle()
+    public override double middle()
     {
         int sum = 0;
         foreach (int element in array)

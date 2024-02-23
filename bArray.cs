@@ -1,14 +1,10 @@
 ﻿namespace Arrays;
 
-internal abstract class bArray
+internal abstract class bArray : IBaseArray
 {
-    protected bArray() { }
-    protected void PrintArray() { }
-    protected void userArray () { }
-    protected void randomArray() { }
-    protected float middle()
-    {
-        return 0;
-    }
+    abstract public void Print();
+    abstract public void userArray ();
+    abstract public void randomArray();
+    abstract public double middle();
 
 }

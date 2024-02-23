@@ -1,6 +1,6 @@
 namespace Arrays;
 
-internal class JaggedArray : bArray
+sealed internal class JaggedArray : bArray, IJaggedArray
 {
     public int[][] array;
 
@@ -22,7 +22,7 @@ internal class JaggedArray : bArray
         }
     }
 
-    public void userArray()
+    public override void userArray()
     {
         Console.WriteLine("Введите значения ступенчатого массива:");
         for (int i = 0; i < array.Length; i++)
@@ -35,7 +35,7 @@ internal class JaggedArray : bArray
         }
     }
 
-    public void randomArray()
+    public override void randomArray()
     {
         Random random = new Random();
         for (int i = 0; i < array.Length; i++)
@@ -47,7 +47,7 @@ internal class JaggedArray : bArray
         }
     }
 
-    public void PrintArray()
+    public override void Print()
     {
         Console.WriteLine("Элементы ступенчатого массива:");
         for (int i = 0; i < array.Length; i++)
@@ -60,7 +60,7 @@ internal class JaggedArray : bArray
         }
     }
 
-    public double middle()
+    public override double middle()
     {
         int sum = 0;
         int count = 0;
