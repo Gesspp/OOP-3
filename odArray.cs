@@ -7,25 +7,18 @@ sealed internal class odArray : bArray, ILineArray
 {
     private int[] array;
 
-    public odArray(int length, bool fillByUser = false)
+    public odArray(int length, bool fillByUser = false) : base(fillByUser)
     {
         array = new int[length];
-        if (fillByUser)
-        {
-            userArray();
-        }
-        else
-        {
-            randomArray();
-        }
     }
 
-    public void ReCreate(int length) {
+    public void ReCreate(int length)
+    {
         array = new int[length];
         userArray();
     }
 
-    public override void userArray()
+    protected override void userArray()
     {
         Console.WriteLine("Введите значения массива:");
         for (int i = 0; i < array.Length; i++)
@@ -34,7 +27,7 @@ sealed internal class odArray : bArray, ILineArray
         }
     }
 
-    public override void randomArray()
+    protected override void randomArray()
     {
         Random random = new Random();
         for (int i = 0; i < array.Length; i++)

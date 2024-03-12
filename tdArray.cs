@@ -5,20 +5,18 @@ sealed internal class tdArray : bArray, ITDArray
 {
     public int[,] array;
 
-    public tdArray(int rows, int columns, bool fillByUser = false)
+    public tdArray(int rows, int columns, bool fillByUser = false) : base(fillByUser)
     {
         array = new int[rows, columns];
-        if (fillByUser)
-        {
-            userArray();
-        }
-        else
-        {
-            randomArray();
-        }
     }
 
-    public override void userArray()
+    public void ReCreate(int rows, int columns)
+    {
+        array = new int[rows, columns];
+        userArray();
+    }
+
+    protected override void userArray()
     {
         Console.WriteLine("Введите значения матрицы:");
         for (int i = 0; i < array.GetLength(0); i++)
@@ -31,7 +29,7 @@ sealed internal class tdArray : bArray, ITDArray
         }
     }
 
-    public override void randomArray()
+    protected override void randomArray()
     {
         Random random = new Random();
         for (int i = 0; i < array.GetLength(0); i++)

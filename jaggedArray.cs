@@ -1,10 +1,12 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace Arrays;
 
 sealed internal class JaggedArray : bArray, IJaggedArray
 {
     public int[][] array;
 
-    public JaggedArray(int[] lengths, bool fillByUser = false)
+    public JaggedArray(int[] lengths, bool fillByUser = false) : base(fillByUser)
     {
         array = new int[lengths.Length][];
         for (int i = 0; i < array.Length; i++)
@@ -12,17 +14,16 @@ sealed internal class JaggedArray : bArray, IJaggedArray
             array[i] = new int[lengths[i]];
         }
 
-        if (fillByUser)
-        {
-            userArray();
-        }
-        else
-        {
-            randomArray();
-        }
+
     }
 
-    public override void userArray()
+    public void ReCreate(int[] lengths)
+    {
+        array = new int[lengths.Length][];
+        userArray();
+    }
+
+    protected override void userArray()
     {
         Console.WriteLine("Введите значения ступенчатого массива:");
         for (int i = 0; i < array.Length; i++)
@@ -35,7 +36,7 @@ sealed internal class JaggedArray : bArray, IJaggedArray
         }
     }
 
-    public override void randomArray()
+    protected override void randomArray()
     {
         Random random = new Random();
         for (int i = 0; i < array.Length; i++)
@@ -75,21 +76,27 @@ sealed internal class JaggedArray : bArray, IJaggedArray
         return (double)sum / count;
     }
 
-    public void middleInNested() {
+    public void middleInNested()
+    {
         Console.Write("Средние значения во всех вложенных массивах");
 
-        for (int i = 0; i < array.Length; i++) {
+        for (int i = 0; i < array.Length; i++)
+        {
             int sum = 0;
             int cnt = 0;
 
-            for (int j = 0; j < array[i].Length; j++) {
+            for (int j = 0; j < array[i].Length; j++)
+            {
                 sum += array[i][j];
                 cnt++;
             }
-            
-            if (i < array.Length - 1) {
+
+            if (i < array.Length - 1)
+            {
                 Console.Write(" " + sum / cnt + ",");
-            } else {
+            }
+            else
+            {
                 Console.Write(" " + sum / cnt);
             }
         }

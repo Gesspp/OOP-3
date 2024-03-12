@@ -2,9 +2,20 @@
 
 internal abstract class bArray : IBaseArray
 {
+    public bArray(bool fillByUser)
+    {
+        if (fillByUser)
+        {
+            userArray();
+        }
+        else
+        {
+            randomArray();
+        }
+    }
     abstract public void Print();
-    abstract public void userArray ();
-    abstract public void randomArray();
+    abstract protected void userArray();
+    abstract protected void randomArray();
     abstract public double middle();
 
 }
